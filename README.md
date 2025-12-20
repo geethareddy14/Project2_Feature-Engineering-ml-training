@@ -22,4 +22,12 @@ Build an end-to-end ML training workflow that:
 
 ---
 
+## Tech Stack
+- Python, Pandas, NumPy
+- scikit-learn, XGBoost
+- MLflow (experiment tracking)
+- Matplotlib (evaluation artifact)
+
+---
+
 ## 📁 Repo Structure
