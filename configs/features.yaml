@@ -1,0 +1,15 @@
+
+---
+
+## Dataset Setup
+This repo uses the Kaggle dataset: **Credit Card Fraud Detection**.
+
+### Option A — Manual (recommended)
+1. Download `creditcard.csv` from Kaggle
+2. Place it here:
+   - `data/raw/creditcard.csv`
+
+### Option B — Kaggle API (optional)
+If you have Kaggle credentials configured:
+```bash
+python src/data/get_data.py
