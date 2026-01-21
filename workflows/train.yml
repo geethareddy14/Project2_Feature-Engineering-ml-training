@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       run_reason:
-        description: "Triggered by n8n schedule"
+        description: "Why this run was triggered"
         required: false
-        default: "Scheduled run"
+        default: "Triggered by n8n"
 
 jobs:
   train:
