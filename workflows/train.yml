@@ -1,1 +1,33 @@
 
+name: Train ML Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_reason:
+        description: "Triggered by n8n schedule"
+        required: false
+        default: "Scheduled run"
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run training pipeline
+        run: |
+          # CHANGE this to how your project runs
+          python run_pipeline.py
