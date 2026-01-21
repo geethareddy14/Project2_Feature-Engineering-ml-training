@@ -7,7 +7,7 @@ on:
       run_reason:
         description: "Why this run was triggered"
         required: false
-        default: "Triggered by n8n"
+        default: "Triggered by n8n" 
 
 jobs:
   train:
